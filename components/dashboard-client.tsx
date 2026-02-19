@@ -70,7 +70,12 @@ export function DashboardClient({ initialBookmarks, userId }: DashboardClientPro
 
   return (
     <>
-      <BookmarkForm userId={userId} onAdd={addBookmark} onBroadcastAdd={broadcastAdd} />
+      <section>
+        <h2 className="mb-3 text-lg font-semibold">Add New Bookmark</h2>
+        <BookmarkForm userId={userId} onAdd={addBookmark} onBroadcastAdd={broadcastAdd} />
+      </section>
+      <section>
+        <h2 className="mb-3 text-lg font-semibold">Your Bookmarks</h2>
       {bookmarks.length === 0 ? (
         <div className="flex flex-col items-center justify-center rounded-lg border border-dashed border-[var(--color-border)] py-16 text-center">
           <svg
@@ -103,6 +108,7 @@ export function DashboardClient({ initialBookmarks, userId }: DashboardClientPro
           ))}
         </div>
       )}
+      </section>
     </>
   );
 }

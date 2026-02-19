@@ -40,7 +40,18 @@ export default async function DashboardPage() {
       </main>
 
       <footer className="pt-8 pb-4 text-center text-xs text-[var(--color-text-muted)]">
-        Smart Bookmark &mdash; Your bookmarks, synced in real-time.
+        <p>Smart Bookmark &mdash; Your bookmarks, synced in real-time.</p>
+        <p className="mt-1">
+          Developed by{" "}
+          <a
+            href="https://niragi-masalia.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--color-primary)] hover:underline"
+          >
+            Niragi
+          </a>
+        </p>
       </footer>
     </div>
   );
